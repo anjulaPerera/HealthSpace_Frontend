@@ -1,7 +1,6 @@
-import 'dart:ffi';
 // profile eke settings walat connect krnna
 import 'package:flutter/material.dart';
-
+import 'package:healthspace_test1/sign_in_screens/profile.dart';
 
 class OrganRequest_Form extends StatefulWidget {
   const OrganRequest_Form({Key? key}) : super(key: key);
@@ -19,7 +18,10 @@ class _OrganRequest_FormState extends State<OrganRequest_Form> {
           Container(
             height: 150,
             color: Colors.white,
-            child: Image.asset("assets/logo.jpg", height: 60, width: 60,
+            child: Image.asset(
+              "assets/logo.jpg",
+              height: 60,
+              width: 60,
             ),
           ),
           Container(
@@ -138,12 +140,11 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 ),
               ),
               onPressed: () {
-                // Navigator.push(
-                //   context, MaterialPageRoute(builder: (_) => User_Profile()));
-                // }
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => ProfilePage()));
               },
               child: const Text(
-                'Submit',//notification ekk backend eken enna oni request ID ekkth ekk
+                'Submit', //notification ekk backend eken enna oni request ID ekkth ekk
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

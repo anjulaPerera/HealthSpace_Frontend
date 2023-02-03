@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:healthspace_test1/Screens/HomeScreen.dart';
 import 'package:healthspace_test1/feed/create_post.dart';
 import 'package:healthspace_test1/settings_screens/settings.dart';
+import 'package:healthspace_test1/sign_in_screens/organrequest_form.dart';
+import 'package:healthspace_test1/start_screen/get_started.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -46,7 +48,7 @@ class NavBar extends StatelessWidget {
             leading: Icon(Icons.chat_bubble),
             title: Text('Chat'),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (builder){
+              Navigator.of(context).push(MaterialPageRoute(builder: (builder) {
                 return Homescreen();
               }));
             },
@@ -55,13 +57,16 @@ class NavBar extends StatelessWidget {
             leading: Icon(Icons.restore_page),
             title: Text('Organ Request Form'),
             onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return OrganRequest_Form();
+              }));
             },
           ),
           ListTile(
             leading: Icon(Icons.post_add),
             title: Text('Post Something'),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return CreatePost();
               }));
             },
@@ -92,7 +97,7 @@ class NavBar extends StatelessWidget {
             leading: Icon(Icons.settings),
             title: Text('Settings'),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (builder){
+              Navigator.of(context).push(MaterialPageRoute(builder: (builder) {
                 return Settings();
               }));
             },
@@ -106,7 +111,11 @@ class NavBar extends StatelessWidget {
           ListTile(
             title: Text('Exit'),
             leading: Icon(Icons.exit_to_app),
-            onTap: () => null,
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return GetStarted();
+              }));
+            },
           ),
         ],
       ),

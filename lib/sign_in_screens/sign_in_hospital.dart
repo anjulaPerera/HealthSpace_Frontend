@@ -261,7 +261,10 @@ class _MyCustomFormState extends State<MyCustomForm> {
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       signInHospital();
-                      // Navigator.push(context, MaterialPageRoute(builder: (_) => const SignIn()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const RegisterAs()));
                     }
                   },
                   child: const Text(
@@ -320,7 +323,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (_) => const SignInAdmin()));
+                              builder: (_) => const SignInHospital()));
                     },
                     child: const Text(
                       'Sign In',

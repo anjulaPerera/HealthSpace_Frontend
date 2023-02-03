@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthspace_test1/settings_screens/help.dart';
 
 import '../sign_in_screens/sign_in_hospital.dart';
 import '../sign_in_screens/sign_up.dart';
@@ -180,7 +181,10 @@ class GetStarted extends StatelessWidget {
                     size: 30,
                     color: Colors.white,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => Help()));
+                  },
                 ),
               ],
             ),
