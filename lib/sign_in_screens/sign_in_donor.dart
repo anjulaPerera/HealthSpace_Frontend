@@ -10,7 +10,7 @@ import 'package:http/http.dart' as http;
 import 'package:healthspace_test1/start_screen/registeras.dart';
 
 // import 'signup.dart';
-import 'signup_admin.dart';
+// import 'signup_admin.dart';
 
 //import 'package:http/http.dart' as http;
 
