@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:healthspace_test1/settings_screens/account_settings/deactive_account.dart';
 import 'package:healthspace_test1/settings_screens/account_settings/delete_account.dart';
 import 'package:healthspace_test1/settings_screens/account_settings/swith_account.dart';
-import 'package:healthspace_test1/sign_in_screens/sign_up.dart';
+
 import 'package:healthspace_test1/sign_in_screens/sign_up_donor.dart';
-import 'package:healthspace_test1/sign_in_screens/sign_up_donor_screen_1.dart';
+
 import 'package:healthspace_test1/start_screen/get_started.dart';
 
 import '../start_screen/registeras.dart';

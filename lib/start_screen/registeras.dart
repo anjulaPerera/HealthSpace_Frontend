@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:healthspace_test1/dashboard/admin_dashboard.dart';
 import 'package:healthspace_test1/sign_in_screens/have_dieses.dart';
-import 'package:healthspace_test1/sign_in_screens/sign_up_donor_screen_1.dart';
+
 import 'package:healthspace_test1/sign_in_screens/signup_hospital.dart';
 import 'package:healthspace_test1/sign_in_screens/signup_organization.dart';
 

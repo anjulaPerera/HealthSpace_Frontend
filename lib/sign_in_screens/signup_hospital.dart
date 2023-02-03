@@ -173,14 +173,6 @@ class _MyCustomFormState extends State<MyCustomForm> {
               onChanged: (value) {
                 reg_id = value;
               },
-              validator: (value) {
-                if (value!.isEmpty ||
-                    value.length < 9 ||
-                    !RegExp(r'^[0-9]+$').hasMatch(value!)) {
-                  return 'Please Enter correct NIC';
-                }
-                return null;
-              },
               decoration: const InputDecoration(
                 filled: true,
                 border: OutlineInputBorder(

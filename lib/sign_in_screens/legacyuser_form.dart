@@ -1,7 +1,7 @@
 //import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:healthspace_test1/sign_in_screens/sign_up_donor_screen_1.dart';
+import 'package:healthspace_test1/sign_in_screens/sign_up_donor.dart';
 
 class LegacyUser_Form extends StatefulWidget {
   const LegacyUser_Form({Key? key}) : super(key: key);
@@ -186,8 +186,8 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 ),
               ),
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => SignUp_Donor()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => Sign_Up_Donor()));
               },
               child: const Text(
                 'Submit',

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:healthspace_test1/settings_screens/help.dart';
 
 import '../sign_in_screens/sign_in_hospital.dart';
-import '../sign_in_screens/sign_up.dart';
+
 import 'registeras.dart';
 
 // import 'signin.dart';

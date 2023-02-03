@@ -188,7 +188,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
             child: TextFormField(
               validator: (value) {
                 if (value!.isEmpty ||
-                    value.length < 9 ||
+                    value.length > 12 ||
                     !RegExp(r'^[0-9 v V]+$').hasMatch(value!)) {
                   return 'Please Enter correct NIC';
                 }

@@ -84,7 +84,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
   var phone_number = '';
   var org_service = '';
 
-  signUpHospital() async {
+  signUpOrganization() async {
     var response = await http.post(
       Uri.parse(
           'https://healthspace-production.up.railway.app/healthspace/option/register_organization'),
@@ -346,11 +346,13 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 ),
               ),
               onPressed: () {
+                // if (_formKey.currentState!.validate()) {
+                //   Navigator.push(context,
+                //       MaterialPageRoute(builder: (_) => const SignIn()));
+                // }
                 if (_formKey.currentState!.validate()) {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) => const SignInHospital()));
+                  signUpOrganization();
+                  // Navigator.push(context, MaterialPageRoute(builder: (_) => const SignIn()));
                 }
               },
               child: const Text(

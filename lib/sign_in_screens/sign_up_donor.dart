@@ -2,9 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:healthspace_test1/settings_screens/help.dart';
+import 'package:healthspace_test1/sign_in_screens/sign_in_donor.dart';
 // import 'package:healthspace_test1/settings_screens/help/help_center.dart';
 // import 'package:healthspace_test1/sign_in_screens/legacyuser_form.dart';
-import 'package:healthspace_test1/sign_in_screens/sign_in_hospital.dart';
+// import 'package:healthspace_test1/sign_in_screens/sign_in_hospital.dart';
 // import 'package:healthspace_test1/sign_in_screens/sign_up_donor_screen_2.dart';
 // import 'package:healthspace_test1/sign_in_screens/signup_hospital.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -128,7 +129,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
     if (response.statusCode == 200) {
       print('Success' + response.body.toString());
       Navigator.push(
-          context, MaterialPageRoute(builder: (_) => const SignInHospital()));
+          context, MaterialPageRoute(builder: (_) => const SignInDonor()));
     } else {
       print('Failed' + response.body.toString());
       print('Something went wrong');
@@ -572,6 +573,10 @@ class _MyCustomFormState extends State<MyCustomForm> {
                   ),
                 ),
                 onPressed: () {
+                  // if (_formKey.currentState!.validate()) {
+                  //   Navigator.push(context,
+                  //       MaterialPageRoute(builder: (_) => const SignIn()));
+                  // }
                   if (_formKey.currentState!.validate()) {
                     registerDonor();
                     // Navigator.push(context, MaterialPageRoute(builder: (_) => const SignIn()));

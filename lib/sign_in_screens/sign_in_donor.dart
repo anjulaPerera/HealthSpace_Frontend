@@ -14,14 +14,14 @@ import 'signup_admin.dart';
 
 //import 'package:http/http.dart' as http;
 
-class SignInHospital extends StatefulWidget {
-  const SignInHospital({Key? key}) : super(key: key);
+class SignInDonor extends StatefulWidget {
+  const SignInDonor({Key? key}) : super(key: key);
 
   @override
-  _SignInHospitalState createState() => _SignInHospitalState();
+  _SignInDonorState createState() => _SignInDonorState();
 }
 
-class _SignInHospitalState extends State<SignInHospital> {
+class _SignInDonorState extends State<SignInDonor> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +70,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
   final _formKey = GlobalKey<FormState>();
 
   // saving form after validation
-  void _SignInHospital() {
+  void _SignInDonor() {
     final isValid = _formKey.currentState!.validate();
     if (!isValid) {
       return;
@@ -80,10 +80,10 @@ class _MyCustomFormState extends State<MyCustomForm> {
   var email = '';
   var password = '';
 
-  signInHospital() async {
+  signInDonor() async {
     var response = await http.post(
       Uri.parse(
-          'https://healthspace-production.up.railway.app/healthspace/option/login_hospital'),
+          'https://healthspace-production.up.railway.app/healthspace/option/login_donor'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -222,7 +222,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                   ),
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      signInHospital();
+                      signInDonor();
                       // Navigator.push(context, MaterialPageRoute(builder: (_) => const SignIn()));
                     }
                   },
@@ -320,13 +320,6 @@ class _MyCustomFormState extends State<MyCustomForm> {
                           .push(MaterialPageRoute(builder: (context) {
                         return SignInAdmin();
                       }));
-                      // if (_formKey.currentState!.validate()) {
-                      //   signInHospital();
-                      //   Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //           builder: (_) => const SignInAdmin()));
-                      // }
                     },
                     child: const Text(
                       'Sign In',

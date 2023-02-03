@@ -5,11 +5,10 @@ import 'package:healthspace_test1/settings_screens/account_settings/swith_accoun
 import 'package:healthspace_test1/settings_screens/settings.dart';
 import 'package:healthspace_test1/sign_in_screens/have_dieses.dart';
 import 'package:healthspace_test1/sign_in_screens/profile.dart';
-import 'package:healthspace_test1/sign_in_screens/sign_up.dart';
 import 'package:healthspace_test1/sign_in_screens/sign_up_patient_screen_2.dart';
 import 'package:healthspace_test1/sign_in_screens/sign_up_patient_screen_3.dart';
 import 'package:healthspace_test1/sign_in_screens/sign_up_patient_screen_4.dart';
-import 'package:healthspace_test1/sign_in_screens/sign_up_donor_screen_1.dart';
+
 import 'package:healthspace_test1/start_screen/get_started.dart';
 // import 'package:healthspace_settings/screens/edit_profile_settings.dart';
 // import 'package:healthspace_settings/screens/help.dart';
