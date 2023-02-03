@@ -5,7 +5,7 @@ import 'package:healthspace_test1/dashboard/admin_dashboard.dart';
 import 'package:healthspace_test1/feed/feed.dart';
 import 'package:healthspace_test1/settings_screens/help/help_center.dart';
 import 'package:healthspace_test1/settings_screens/password_security/fogot_password.dart';
-import 'package:healthspace_test1/sign_in_screens/sign_in_admin.dart';
+import 'package:healthspace_test1/sign_in_screens/sign_in_hospital.dart';
 import 'package:http/http.dart' as http;
 import 'package:healthspace_test1/start_screen/registeras.dart';
 
@@ -14,14 +14,14 @@ import 'signup_admin.dart';
 
 //import 'package:http/http.dart' as http;
 
-class SignInHospital extends StatefulWidget {
-  const SignInHospital({Key? key}) : super(key: key);
+class SignInAdmin extends StatefulWidget {
+  const SignInAdmin({Key? key}) : super(key: key);
 
   @override
-  _SignInHospitalState createState() => _SignInHospitalState();
+  _SignInAdminState createState() => _SignInAdminState();
 }
 
-class _SignInHospitalState extends State<SignInHospital> {
+class _SignInAdminState extends State<SignInAdmin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -230,8 +230,8 @@ class _MyCustomFormState extends State<MyCustomForm> {
                     //   Navigator.push(
                     //       context, MaterialPageRoute(builder: (_) => const Passwo()));
                     // }
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => Feed()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => AdminDashboard()));
                   },
                   child: const Text(
                     'Sign In',
@@ -244,6 +244,59 @@ class _MyCustomFormState extends State<MyCustomForm> {
           const Padding(
             padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
           ),
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
+          //   //color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+          //   //child: const Text('Submit',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.center,
+          //     crossAxisAlignment: CrossAxisAlignment.center,
+          //     children: [
+          //       const Text(
+          //         "Not a member?",
+          //         style: TextStyle(color: Colors.white, fontSize: 15),
+          //       ),
+          //       TextButton(
+          //         style: const ButtonStyle(alignment: Alignment.center),
+          //         onPressed: () {
+          //           if (_formKey.currentState!.validate()) {
+          //             signInHospital();
+          //             // Navigator.push(context, MaterialPageRoute(builder: (_) => const SignIn()));
+          //           }
+          //         },
+          //         child: const Text(
+          //           'Sign Up',
+          //           style: TextStyle(
+          //               decoration: TextDecoration.underline,
+          //               decorationColor: Colors.white,
+          //               decorationThickness: 1,
+          //               fontWeight: FontWeight.bold,
+          //               color: Colors.white,
+          //               fontSize: 20),
+          //         ),
+          //       ),
+          // OutlinedButton(
+          //   style: ButtonStyle(
+          //     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          //       RoundedRectangleBorder(
+          //         borderRadius: BorderRadius.circular(18.0),
+          //         //side: BorderSide(color: Colors.white,width: 3.0),
+          //         side: BorderSide(color: Colors.red, width: 5),
+          //       ),
+          //     ),
+          //   ),
+          //   onPressed: () {
+          //     Navigator.push(
+          //         context, MaterialPageRoute(builder: (_) => SignUp()));
+          //   },
+          //   child: Text(
+          //     'Sign In',
+          //     style: TextStyle(color: Colors.white, fontSize: 25),
+          //   ),
+          // ),
+          //     ],
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
             //color: Colors.blue, borderRadius: BorderRadius.circular(20)),
@@ -252,88 +305,37 @@ class _MyCustomFormState extends State<MyCustomForm> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text(
-                  "Not a member?",
-                  style: TextStyle(color: Colors.white, fontSize: 15),
-                ),
-                TextButton(
-                  style: const ButtonStyle(alignment: Alignment.center),
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      signInHospital();
-                      // Navigator.push(context, MaterialPageRoute(builder: (_) => const SignIn()));
-                    }
-                  },
-                  child: const Text(
-                    'Sign Up',
-                    style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        decorationColor: Colors.white,
-                        decorationThickness: 1,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 20),
-                  ),
-                ),
-                // OutlinedButton(
-                //   style: ButtonStyle(
-                //     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                //       RoundedRectangleBorder(
-                //         borderRadius: BorderRadius.circular(18.0),
-                //         //side: BorderSide(color: Colors.white,width: 3.0),
-                //         side: BorderSide(color: Colors.red, width: 5),
-                //       ),
-                //     ),
-                //   ),
+                // const Text(
+                //   "Sign In as an admin.",
+                //   style: TextStyle(color: Colors.white, fontSize: 15),
+                // ),
+                // TextButton(
+                //   style: const ButtonStyle(alignment: Alignment.center),
                 //   onPressed: () {
                 //     Navigator.push(
-                //         context, MaterialPageRoute(builder: (_) => SignUp()));
+                //         context,
+                //         MaterialPageRoute(
+                //             builder: (_) => const SignInHospital()));
                 //   },
-                //   child: Text(
-                //     'Sign In',
-                //     style: TextStyle(color: Colors.white, fontSize: 25),
+                //   child: TextButton(
+                //     onPressed: () {
+                //       Navigator.push(
+                //           context,
+                //           MaterialPageRoute(
+                //               builder: (_) => const SignInAdmin()));
+                //     },
+                //     child: const Text(
+                //       'Sign In',
+                //       style: TextStyle(
+                //           decoration: TextDecoration.underline,
+                //           decorationColor: Colors.white,
+                //           decorationThickness: 1,
+                //           fontWeight: FontWeight.bold,
+                //           color: Colors.white,
+                //           fontSize: 20),
+                //     ),
                 //   ),
                 // ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-            //color: Colors.blue, borderRadius: BorderRadius.circular(20)),
-            //child: const Text('Submit',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Text(
-                  "Sign In as an admin.",
-                  style: TextStyle(color: Colors.white, fontSize: 15),
-                ),
-                TextButton(
-                  style: const ButtonStyle(alignment: Alignment.center),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const SignInAdmin()));
-                  },
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (_) => const SignInAdmin()));
-                    },
-                    child: const Text(
-                      'Sign In',
-                      style: TextStyle(
-                          decoration: TextDecoration.underline,
-                          decorationColor: Colors.white,
-                          decorationThickness: 1,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20),
-                    ),
-                  ),
-                ),
                 // OutlinedButton(
                 //   style: ButtonStyle(
                 //     shape: MaterialStateProperty.all<RoundedRectangleBorder>(

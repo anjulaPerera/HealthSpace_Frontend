@@ -130,7 +130,7 @@ class GetStarted extends StatelessWidget {
                   style: ButtonStyle(alignment: Alignment.center),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => RegisterAs()));
+                        MaterialPageRoute(builder: (_) => SignInHospital()));
                   },
                   child: Text(
                     'Sign In',

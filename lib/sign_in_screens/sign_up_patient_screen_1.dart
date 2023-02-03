@@ -226,29 +226,29 @@ class _MyCustomFormState extends State<MyCustomForm> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(60, 10, 25, 10),
-            //padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
-            child: TextFormField(
-              validator: (value) {
-                if (value!.isEmpty ||
-                    value.length < 10 ||
-                    !RegExp(r'^[0-9]+$').hasMatch(value!)) {
-                  return 'Please enter your birthday(DD/MM/YYYY)';
-                }
-                return null;
-              },
-              decoration: const InputDecoration(
-                filled: true,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                ),
-                hintText: 'Birthday',
-                hintStyle: TextStyle(fontWeight: FontWeight.bold),
-                fillColor: Colors.white,
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(60, 10, 25, 10),
+          //   //padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
+          //   child: TextFormField(
+          //     validator: (value) {
+          //       if (value!.isEmpty ||
+          //           value.length < 10 ||
+          //           !RegExp(r'^[0-9]+$').hasMatch(value!)) {
+          //         return 'Please enter your birthday(DD/MM/YYYY)';
+          //       }
+          //       return null;
+          //     },
+          //     decoration: const InputDecoration(
+          //       filled: true,
+          //       border: OutlineInputBorder(
+          //         borderRadius: BorderRadius.all(Radius.circular(30)),
+          //       ),
+          //       hintText: 'Birthday',
+          //       hintStyle: TextStyle(fontWeight: FontWeight.bold),
+          //       fillColor: Colors.white,
+          //     ),
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.fromLTRB(60, 10, 25, 10),
             //padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
